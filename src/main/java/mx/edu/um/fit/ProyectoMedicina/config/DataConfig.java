@@ -153,7 +153,7 @@ public class DataConfig {
                 pp.setProperty("hibernate.default_schema", hibernateSchema);
                 
                 factoryBean.setDataSource(dataSource());
-                factoryBean.setPackagesToScan("");
+                factoryBean.setPackagesToScan("mx.edu.um.fit.ProyectoMedicina.model");
                 factoryBean.setHibernateProperties(pp);
                 factoryBean.afterPropertiesSet();
                 return factoryBean.getObject();                

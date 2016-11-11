@@ -9,7 +9,7 @@
         <link href="css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
-       <button class="btn btn-primary "type="button" >Ejemplo Boton <span class="caret"></span>
+    
 		
        </button>
         <h1>Hello World! Home</h1>
