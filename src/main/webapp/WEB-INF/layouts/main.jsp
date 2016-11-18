@@ -12,12 +12,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.min-js"></script>
+        <link rel="stylesheet" href="<s:url value="/css/bootstrap.min.css"/>">
+        <script src="<c:url value="/js/jquery.min.js"/>"></script>
+        <script src="<s:url value="/js/bootstrap.min.js"/>"></script>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         
-        <title>Proyecto Medicina</title>
+        <title>Proyecto Medicina <sitemesh:write property="title"/></title>
         
     </head>
     <body>
@@ -73,6 +73,9 @@
         
         <button class="btn btn-primary "type="button" >Ejemplo Boton <span class="caret"></span> </button>
         <p class="alert alert-danger"><strong>Uh oh! </strong>Have you had your daily dose of veggies today??</p>
+        
+        <sitemesh:write property='body'/>
+        <sitemesh:write property="content"/>
                
 
 </body>
