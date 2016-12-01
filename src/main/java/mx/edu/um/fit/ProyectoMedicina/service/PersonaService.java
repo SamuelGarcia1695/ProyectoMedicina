@@ -5,6 +5,7 @@
  */
 package mx.edu.um.fit.ProyectoMedicina.service;
 
+import java.util.List;
 import mx.edu.um.fit.ProyectoMedicina.model.Persona;
 
 /**
@@ -12,6 +13,10 @@ import mx.edu.um.fit.ProyectoMedicina.model.Persona;
  * @author Samuel
  */
 public interface PersonaService {
-    
+   
+    public List<Persona> getAll();
+    public Persona getById(Long id);
     public Persona save(Persona persona);
+    public Persona update(Persona persona);
+    public Persona delete(Long id);
 }

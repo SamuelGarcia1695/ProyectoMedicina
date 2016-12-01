@@ -5,6 +5,7 @@
  */
 package mx.edu.um.fit.ProyectoMedicina.web;
 
+import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import mx.edu.um.fit.ProyectoMedicina.model.Persona;
@@ -51,13 +52,23 @@ public class PersonaController extends BaseController {
             return "/persona/nuevo";
         }
         
-        personaService.save(persona);   
+        log.debug("Datos enviados: " + persona.toString());
+        Persona p = personaService.save(persona);   
         redirectAttributes.addFlashAttribute("Persona creada");
         redirectAttributes.addFlashAttribute(new String[]{persona.getNombre()});
 
-        return "redirect:/persona/nuevo";
+        return "redirect:/persona/lista";
         
     }
+    
+    @RequestMapping("/lista")
+    public String lista(Model model){
+       
+   List<Persona> lista= personaService.getAll();
+   
+   model.addAttribute("lista",lista);
+   return "/persona/lista";
+   } 
     
 }
 

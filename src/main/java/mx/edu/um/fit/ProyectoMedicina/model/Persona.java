@@ -69,7 +69,7 @@ public class Persona {
     /**
      * @param nombre the name to set
      */
-    public void setName(String nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 

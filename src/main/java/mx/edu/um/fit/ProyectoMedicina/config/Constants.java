@@ -65,8 +65,8 @@ public class Constants {
     public static final String AREA_UI="area";
     public static final String AREA_LIST_UI="areaList";
     //
-    public static final String MACHINE_UI="machine";
-    public static final String MACHINE_LIST_UI="machineList";
+    public static final String PERSONA_UI="persona";
+    public static final String PERSONA_LIST_UI="personaList";
     //
     public static final String SELLER_UI="seller";
     public static final String SELLER_LIST_UI="sellerList";

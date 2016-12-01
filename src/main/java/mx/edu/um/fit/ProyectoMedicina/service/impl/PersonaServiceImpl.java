@@ -6,6 +6,7 @@
 package mx.edu.um.fit.ProyectoMedicina.service.impl;
 
 
+import java.util.List;
 import mx.edu.um.fit.ProyectoMedicina.dao.PersonaDao;
 import mx.edu.um.fit.ProyectoMedicina.model.Persona;
 import mx.edu.um.fit.ProyectoMedicina.service.BaseService;
@@ -24,6 +25,12 @@ public class PersonaServiceImpl extends BaseService implements PersonaService {
     private PersonaDao personaDao;
    
    
+     @Override
+    public List<Persona> getAll() {
+         return personaDao.getPersona(new Persona());
+    }
+   
+   @Override
     public Persona getById(Long id) {
         return personaDao.get(id);
     }
@@ -31,6 +38,18 @@ public class PersonaServiceImpl extends BaseService implements PersonaService {
     @Override
     public Persona save(Persona persona) {
         return personaDao.save(persona);
+    }
+
+  
+
+    @Override
+    public Persona update(Persona persona) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Persona delete(Long id) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
     

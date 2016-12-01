@@ -111,7 +111,7 @@
                     <form:button id="updateBtn" name="updateBtn" class="btn btn-primary btn-large" value="update">
                         <span class="glyphicon glyphicon-floppy-save" aria-hidden="true"></span> Actualizar
                     </form:button>
-                    <a class="btn btn-danger" href="<c:url value="/machine/delete/${machine.id}"/>" onclick="return confirm('Desea eliminar?');" >Borrar <span class="glyphicon glyphicon-trash"></span></a>
+                    <a class="btn btn-danger" href="<c:url value="/persona/delete"/>" onclick="return confirm('Desea eliminar?');" >Borrar <span class="glyphicon glyphicon-trash"></span></a>
                     <a class="btn btn-default" href="<c:url value="/"/>">Cancelar <span class="glyphicon glyphicon-erase"></span></a>
                 </div>
             </div>
