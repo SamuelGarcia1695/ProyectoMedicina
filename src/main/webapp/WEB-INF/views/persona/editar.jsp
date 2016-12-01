@@ -1,6 +1,6 @@
 <%-- 
-    Document   : nuevo
-    Created on : 18/11/2016, 01:24:02 PM
+    Document   : editar
+    Created on : 24/11/2016, 02:33:33 PM
     Author     : Samuel
 --%>
 
@@ -13,14 +13,14 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Nueva Persona</title>
+        <title>Editar Persona</title>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <legend>Nueva Persona</legend>
-                <jsp:include page="formulario.jsp">
-                    <jsp:param name="type" value="NEW"/>
+                <legend>Editar Persona</legend>
+                <jsp:include page="form.jsp">
+                    <jsp:param name="type" value="EDIT"/>
                 </jsp:include>
             </div><!-- /.row --->
         </div><!-- /.container -->
