@@ -8,6 +8,7 @@ package mx.edu.um.fit.ProyectoMedicina.web;
 import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import mx.edu.um.fit.ProyectoMedicina.config.Constants;
 import mx.edu.um.fit.ProyectoMedicina.model.Persona;
 import mx.edu.um.fit.ProyectoMedicina.service.PersonaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,7 +67,7 @@ public class PersonaController extends BaseController {
        
    List<Persona> lista= personaService.getAll();
    
-   model.addAttribute("lista",lista);
+   model.addAttribute(Constants.PERSONA_LIST_UI,lista);
    return "/persona/lista";
    } 
     

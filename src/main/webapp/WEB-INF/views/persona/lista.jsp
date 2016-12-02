@@ -4,7 +4,12 @@
     Author     : Samuel
 --%>
 
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c"   uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="s"   uri="http://www.springframework.org/tags" %>
+<%@taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -39,16 +44,11 @@
                         </c:forEach>
                     </tbody>
                 </table>
+                            ${message}
             </div><!--/.row-->
         </div><!--/.container -->
     </body>
     
-    <content>
-        <script type="text/javascript">
-            $(document).ready(function () {
-                $('#persona').DataTable();
-            });
-        </script>
-    </content>
+   
     
 </html>

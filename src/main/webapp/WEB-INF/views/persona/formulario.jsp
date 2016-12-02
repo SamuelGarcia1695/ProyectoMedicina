@@ -62,7 +62,7 @@
         <s:bind path="persona.apellidom">
             <div class="form-group">
 
-                <label for="name" class="control-label col-xs-2">Apellido Materno</label>    
+                <label for="Apellido Materno" class="control-label col-xs-2">Apellido Materno</label>    
                 <div class="col-xs-5">
                     <form:input path="apellidom" class="form-control" placeholder="Apellido Materno"/>
                 </div>                                
@@ -72,7 +72,7 @@
         <s:bind path="persona.edad">
             <div class="form-group">
 
-                <label for="name" class="control-label col-xs-2">Edad</label>    
+                <label for="Edad" class="control-label col-xs-2">Edad</label>    
                 <div class="col-xs-5">
                     <form:input path="edad" class="form-control" placeholder="Edad"/>
                 </div>                                
@@ -82,7 +82,7 @@
         <s:bind path="persona.sexo">
             <div class="form-group">
 
-                <label for="name" class="control-label col-xs-2">Sexo</label>    
+                <label for="Sexo" class="control-label col-xs-2">Sexo</label>    
                 <div class="col-xs-5">
                     <form:input path="sexo" class="form-control" placeholder="Sexo"/>
                 </div>                                

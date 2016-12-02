@@ -12,22 +12,23 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" href="<s:url value="/css/bootstrap.min.css"/>">
-        <script src="<c:url value="/js/jquery.min.js"/>"></script>
-        <script src="<s:url value="/js/bootstrap.min.js"/>"></script>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Proyecto Medicina <sitemesh:write property="title"/></title>
-        
+        <link rel="stylesheet" href="<s:url value="/css/bootstrap.min.css"/>">
+          
+               
     </head>
     <body>
        
         
+        <div class="container"> 
+        <sitemesh:write property='body'/>
+        </div>
         
-        
+        <script src="<c:url value="/js/jquery.min.js"/>"></script>
+        <script src="<s:url value="/js/bootstrap.min.js"/>"></script>
       
         
-        <sitemesh:write property='body'/>
         <sitemesh:write property="content"/>
                
 

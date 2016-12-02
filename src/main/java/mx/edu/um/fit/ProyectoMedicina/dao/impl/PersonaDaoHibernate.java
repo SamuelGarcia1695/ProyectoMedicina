@@ -13,6 +13,7 @@ import javax.persistence.criteria.Root;
 import mx.edu.um.fit.ProyectoMedicina.dao.BaseDao;
 import mx.edu.um.fit.ProyectoMedicina.dao.PersonaDao;
 import mx.edu.um.fit.ProyectoMedicina.model.Persona;
+import org.hibernate.NonUniqueObjectException;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -53,7 +54,14 @@ public class PersonaDaoHibernate extends BaseDao implements PersonaDao{
 
     @Override
     public Persona update(Persona persona) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        try{
+            currentSession().update(persona);
+        } catch(NonUniqueObjectException nuoe){
+            log.warn("Question with the same Id in session already exists, trying to merge");
+            currentSession().merge(persona);
+            currentSession().flush();
+        }
+        return persona;
     }
 
     @Override
